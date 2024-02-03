@@ -13,6 +13,12 @@
 		EA076E7E2B15DE72001A033C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA076E7D2B15DE72001A033C /* Preview Assets.xcassets */; };
 		EA076E852B15DF7F001A033C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E842B15DF7F001A033C /* AudioPlayer.swift */; };
 		EA2EA2F52B160369002D300E /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2EA2F32B160369002D300E /* 1.mp3 */; };
+		EA37F1902B6EF28E00884AC4 /* nefes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */; };
+		EA37F1962B6EFA0B00884AC4 /* Bereket&Denge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */; };
+		EA37F1972B6EFA0B00884AC4 /* basari.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1922B6EFA0A00884AC4 /* basari.mp3 */; };
+		EA37F1982B6EFA0B00884AC4 /* 4cumle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1932B6EFA0A00884AC4 /* 4cumle.mp3 */; };
+		EA37F1992B6EFA0B00884AC4 /* mujde.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1942B6EFA0A00884AC4 /* mujde.mp3 */; };
+		EA37F19A2B6EFA0B00884AC4 /* baris&birlik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */; };
 		EA7E92052B6E9377009FE024 /* 528.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA7E92042B6E9377009FE024 /* 528.mp3 */; };
 		EABA6E3E2B162B6100BBDC24 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EABA6E3D2B162B6100BBDC24 /* 2.mp3 */; };
 /* End PBXBuildFile section */
@@ -26,6 +32,12 @@
 		EA076E842B15DF7F001A033C /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		EA076E862B15E25C001A033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EA2EA2F32B160369002D300E /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nefes.mp3; sourceTree = "<group>"; };
+		EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bereket&Denge.mp3"; sourceTree = "<group>"; };
+		EA37F1922B6EFA0A00884AC4 /* basari.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basari.mp3; sourceTree = "<group>"; };
+		EA37F1932B6EFA0A00884AC4 /* 4cumle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4cumle.mp3; sourceTree = "<group>"; };
+		EA37F1942B6EFA0A00884AC4 /* mujde.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mujde.mp3; sourceTree = "<group>"; };
+		EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "baris&birlik.mp3"; sourceTree = "<group>"; };
 		EA7E92042B6E9377009FE024 /* 528.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 528.mp3; sourceTree = "<group>"; };
 		EABA6E3D2B162B6100BBDC24 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +77,12 @@
 				EA076E782B15DE71001A033C /* ContentView.swift */,
 				EA076E842B15DF7F001A033C /* AudioPlayer.swift */,
 				EA076E7A2B15DE72001A033C /* Assets.xcassets */,
+				EA37F1932B6EFA0A00884AC4 /* 4cumle.mp3 */,
+				EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */,
+				EA37F1922B6EFA0A00884AC4 /* basari.mp3 */,
+				EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */,
+				EA37F1942B6EFA0A00884AC4 /* mujde.mp3 */,
+				EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */,
 				EA7E92042B6E9377009FE024 /* 528.mp3 */,
 				EA2EA2F32B160369002D300E /* 1.mp3 */,
 				EABA6E3D2B162B6100BBDC24 /* 2.mp3 */,
@@ -139,11 +157,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA37F1902B6EF28E00884AC4 /* nefes.mp3 in Resources */,
 				EABA6E3E2B162B6100BBDC24 /* 2.mp3 in Resources */,
+				EA37F1972B6EFA0B00884AC4 /* basari.mp3 in Resources */,
 				EA076E7E2B15DE72001A033C /* Preview Assets.xcassets in Resources */,
 				EA076E7B2B15DE72001A033C /* Assets.xcassets in Resources */,
 				EA7E92052B6E9377009FE024 /* 528.mp3 in Resources */,
+				EA37F1992B6EFA0B00884AC4 /* mujde.mp3 in Resources */,
 				EA2EA2F52B160369002D300E /* 1.mp3 in Resources */,
+				EA37F1982B6EFA0B00884AC4 /* 4cumle.mp3 in Resources */,
+				EA37F19A2B6EFA0B00884AC4 /* baris&birlik.mp3 in Resources */,
+				EA37F1962B6EFA0B00884AC4 /* Bereket&Denge.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

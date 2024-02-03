@@ -12,7 +12,6 @@ struct CalmApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-               )
         }
     }
 }

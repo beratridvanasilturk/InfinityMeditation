@@ -13,6 +13,12 @@ class AudioPlayerManager: ObservableObject {
     
     private var audioPlayer: AVAudioPlayer!
     private var audioPlayer2: AVAudioPlayer!
+    private var audioPlayNefes: AVAudioPlayer!
+    private var audioPlayBasari: AVAudioPlayer!
+    private var audioPlayBarisVeBirlik: AVAudioPlayer!
+    private var audioPlayBereketDenge: AVAudioPlayer!
+    private var audioPlay4Cumle: AVAudioPlayer!
+    private var audioPlay528: AVAudioPlayer!
     
      init() {
          do {
