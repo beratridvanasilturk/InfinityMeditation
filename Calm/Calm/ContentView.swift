@@ -5,6 +5,8 @@
 //  Created by Berat Rıdvan Asiltürk on 28.11.2023.
 //
 
+// TODO: - Flag'ler UserDef'te tutulmali
+
 import SwiftUI
 import AVFoundation
 
@@ -57,6 +59,7 @@ struct ContentView: View {
             } label: {
                 Text("Nefes")
             }
+            Spacer()
             Button {
                 if isPlayingNefes == true {
                     audioPlayNefes.stop()
@@ -80,7 +83,7 @@ struct ContentView: View {
             } label: {
                 Text("Basari")
             }
-            
+            Spacer()
             Button {
                 if isPlayingNefes == true {
                     audioPlayNefes.stop()
@@ -104,6 +107,7 @@ struct ContentView: View {
             } label: {
                 Text("BarisVeBirlik")
             }
+            Spacer()
             Button {
                 if isPlayingNefes == true {
                     audioPlayNefes.stop()
@@ -127,7 +131,7 @@ struct ContentView: View {
             } label: {
                 Text("BereketDenge")
             }
-            
+            Spacer()
             Button {
                 if isPlayingNefes == true {
                     audioPlayNefes.stop()
@@ -151,6 +155,7 @@ struct ContentView: View {
             } label: {
                 Text("528")
             }
+            Spacer()
             Button {
                 if isPlayingNefes == true {
                     audioPlayNefes.stop()
@@ -174,6 +179,7 @@ struct ContentView: View {
             } label: {
                 Text("4 Cumle")
             }
+            Spacer()
             Button {
                 if isPlayingNefes == true {
                     audioPlayNefes.stop()
@@ -197,6 +203,7 @@ struct ContentView: View {
             } label: {
                 Text("Mujde")
             }
+            Spacer()
         }
         .onAppear{
             playNefes()
