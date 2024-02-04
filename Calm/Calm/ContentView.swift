@@ -9,8 +9,17 @@
 
 import SwiftUI
 import AVFoundation
+import AVKit
 
 struct ContentView: View {
+    
+    // Button Hide
+    @State private var isHidden = false
+    
+    @State var currentVideo = "nefesVideo"
+    
+    
+    
     
     @State private var audioPlayer1: AVAudioPlayer!
     @State private var audioPlayer2: AVAudioPlayer!
@@ -34,176 +43,84 @@ struct ContentView: View {
     @StateObject private var audioPlayerManager = AudioPlayerManager()
     
     var body: some View {
-        
-        VStack {
-            Button {
-                if isPlayingNefes == true {
-                    audioPlayNefes.stop()
+        ZStack {
+            
+            VideoPlayerView(currentVideo: $currentVideo)
+                        .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Button {
+                    if currentVideo == "nefesVideo" {
+                                        currentVideo = "h"
+                                    } else {
+                                        currentVideo = "4"
+                                    }
+                    checkIsPlaying()
+                    playNefes()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                } label: {
+                    if !isHidden {
+                        Text("Nefes")
+                    }
                 }
-                if isPlayingBasari == true {
-                    audioPlayBasari.stop()
-                }
-                if isPlayingBarisVeBirlik == true {
-                    audioPlayBarisVeBirlik.stop()
-                }
-                if isPlayingBereketDenge == true {
-                    audioPlayBereketDenge.stop()
-                }
-                if isPlaying4Cumle == true {
-                    audioPlay4Cumle.stop()
-                }
-                if isPlaying528 == true {
-                    audioPlay528.stop()
-                }
-                playNefes()
-            } label: {
-                Text("Nefes")
+                .padding()
+                .background(Color.green)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
+                //            Button {
+                //                checkIsPlaying()
+                //                playBasari()
+                //            } label: {
+                //                Text("Basari")
+                //            }
+                //            Spacer()
+                //            Button {
+                //                checkIsPlaying()
+                //                playBarisVeBirlik()
+                //            } label: {
+                //                Text("BarisVeBirlik")
+                //            }
+                //            Spacer()
+                //            Button {
+                //                checkIsPlaying()
+                //                playBereketDenge()
+                //            } label: {
+                //                Text("BereketDenge")
+                //            }
+                //            Spacer()
+                //            Button {
+                //                checkIsPlaying()
+                //                playNefes()
+                //            } label: {
+                //                Text("528")
+                //            }
+                //            Spacer()
+                //            Button {
+                //                checkIsPlaying()
+                //                play4Cumle()
+                //            } label: {
+                //                Text("4 Cumle")
+                //            }
+                //            Spacer()
+                //            Button {
+                //                checkIsPlaying()
+                //                playMujde()
+                //            } label: {
+                //                Text("Mujde")
+                //            }
+                //            Spacer()
             }
-            Spacer()
-            Button {
-                if isPlayingNefes == true {
-                    audioPlayNefes.stop()
+        }
+        .onTapGesture {
+            if isHidden {
+                withAnimation {
+                    isHidden.toggle()
                 }
-                if isPlayingBasari == true {
-                    audioPlayBasari.stop()
-                }
-                if isPlayingBarisVeBirlik == true {
-                    audioPlayBarisVeBirlik.stop()
-                }
-                if isPlayingBereketDenge == true {
-                    audioPlayBereketDenge.stop()
-                }
-                if isPlaying4Cumle == true {
-                    audioPlay4Cumle.stop()
-                }
-                if isPlaying528 == true {
-                    audioPlay528.stop()
-                }
-                playBasari()
-            } label: {
-                Text("Basari")
             }
-            Spacer()
-            Button {
-                if isPlayingNefes == true {
-                    audioPlayNefes.stop()
-                }
-                if isPlayingBasari == true {
-                    audioPlayBasari.stop()
-                }
-                if isPlayingBarisVeBirlik == true {
-                    audioPlayBarisVeBirlik.stop()
-                }
-                if isPlayingBereketDenge == true {
-                    audioPlayBereketDenge.stop()
-                }
-                if isPlaying4Cumle == true {
-                    audioPlay4Cumle.stop()
-                }
-                if isPlaying528 == true {
-                    audioPlay528.stop()
-                }
-                playBarisVeBirlik()
-            } label: {
-                Text("BarisVeBirlik")
-            }
-            Spacer()
-            Button {
-                if isPlayingNefes == true {
-                    audioPlayNefes.stop()
-                }
-                if isPlayingBasari == true {
-                    audioPlayBasari.stop()
-                }
-                if isPlayingBarisVeBirlik == true {
-                    audioPlayBarisVeBirlik.stop()
-                }
-                if isPlayingBereketDenge == true {
-                    audioPlayBereketDenge.stop()
-                }
-                if isPlaying4Cumle == true {
-                    audioPlay4Cumle.stop()
-                }
-                if isPlaying528 == true {
-                    audioPlay528.stop()
-                }
-                playBereketDenge()
-            } label: {
-                Text("BereketDenge")
-            }
-            Spacer()
-            Button {
-                if isPlayingNefes == true {
-                    audioPlayNefes.stop()
-                }
-                if isPlayingBasari == true {
-                    audioPlayBasari.stop()
-                }
-                if isPlayingBarisVeBirlik == true {
-                    audioPlayBarisVeBirlik.stop()
-                }
-                if isPlayingBereketDenge == true {
-                    audioPlayBereketDenge.stop()
-                }
-                if isPlaying4Cumle == true {
-                    audioPlay4Cumle.stop()
-                }
-                if isPlaying528 == true {
-                    audioPlay528.stop()
-                }
-                playNefes()
-            } label: {
-                Text("528")
-            }
-            Spacer()
-            Button {
-                if isPlayingNefes == true {
-                    audioPlayNefes.stop()
-                }
-                if isPlayingBasari == true {
-                    audioPlayBasari.stop()
-                }
-                if isPlayingBarisVeBirlik == true {
-                    audioPlayBarisVeBirlik.stop()
-                }
-                if isPlayingBereketDenge == true {
-                    audioPlayBereketDenge.stop()
-                }
-                if isPlaying4Cumle == true {
-                    audioPlay4Cumle.stop()
-                }
-                if isPlaying528 == true {
-                    audioPlay528.stop()
-                }
-                play4Cumle()
-            } label: {
-                Text("4 Cumle")
-            }
-            Spacer()
-            Button {
-                if isPlayingNefes == true {
-                    audioPlayNefes.stop()
-                }
-                if isPlayingBasari == true {
-                    audioPlayBasari.stop()
-                }
-                if isPlayingBarisVeBirlik == true {
-                    audioPlayBarisVeBirlik.stop()
-                }
-                if isPlayingBereketDenge == true {
-                    audioPlayBereketDenge.stop()
-                }
-                if isPlaying4Cumle == true {
-                    audioPlay4Cumle.stop()
-                }
-                if isPlaying528 == true {
-                    audioPlay528.stop()
-                }
-                playMujde()
-            } label: {
-                Text("Mujde")
-            }
-            Spacer()
         }
         .onAppear{
             playNefes()
@@ -307,10 +224,64 @@ struct ContentView: View {
             }
         }
     }
+    
+    func checkIsPlaying() {
+        if isPlayingNefes == true {
+            audioPlayNefes.stop()
+        }
+        if isPlayingBasari == true {
+            audioPlayBasari.stop()
+        }
+        if isPlayingBarisVeBirlik == true {
+            audioPlayBarisVeBirlik.stop()
+        }
+        if isPlayingBereketDenge == true {
+            audioPlayBereketDenge.stop()
+        }
+        if isPlaying4Cumle == true {
+            audioPlay4Cumle.stop()
+        }
+        if isPlaying528 == true {
+            audioPlay528.stop()
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct VideoPlayerView: UIViewRepresentable {
+    @Binding var currentVideo: String
+       var avQueuePlayer = AVQueuePlayer()
+    
+    func makeUIView(context: Context) -> UIView {
+        let avPlayer = AVPlayer(url: Bundle.main.url(forResource: currentVideo, withExtension: "mp4")!)
+        let player = VideoPlayer(player: avPlayer)
+        
+        let playerLayer = AVPlayerLayer(player: avQueuePlayer)
+        playerLayer.videoGravity = .resizeAspectFill
+        
+        let view = UIView(frame: UIScreen.main.bounds)
+        
+        // 90 derece saga yatirir ekrani
+//        playerLayer.transform = CATransform3DMakeRotation(.pi / 2, 0, 0, 1)
+               
+               playerLayer.frame = view.frame
+               view.layer.addSublayer(playerLayer)
+               
+        avQueuePlayer.play()
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIView, context: Context) {
+        guard let url = Bundle.main.url(forResource: currentVideo, withExtension: "mp4") else { return }
+               let playerItem = AVPlayerItem(url: url)
+               
+        avQueuePlayer.removeAllItems()
+        avQueuePlayer.replaceCurrentItem(with: playerItem)
+        avQueuePlayer.play()
     }
 }
