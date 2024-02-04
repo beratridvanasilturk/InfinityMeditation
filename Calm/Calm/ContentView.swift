@@ -16,10 +16,7 @@ struct ContentView: View {
     // Button Hide
     @State private var isHidden = false
     
-    @State var currentVideo = "nefesVideo"
-    
-    
-    
+    @State var currentVideo = "nefesMp4"
     
     @State private var audioPlayer1: AVAudioPlayer!
     @State private var audioPlayer2: AVAudioPlayer!
@@ -50,11 +47,7 @@ struct ContentView: View {
             
             VStack {
                 Button {
-                    if currentVideo == "nefesVideo" {
-                                        currentVideo = "h"
-                                    } else {
-                                        currentVideo = "4"
-                                    }
+                    currentVideo = "nefesMp4"
                     checkIsPlaying()
                     playNefes()
                     withAnimation {
@@ -71,26 +64,56 @@ struct ContentView: View {
                 .cornerRadius(8)
                 .shadow(radius: 4)
                 .padding()
-                //            Button {
-                //                checkIsPlaying()
-                //                playBasari()
-                //            } label: {
-                //                Text("Basari")
-                //            }
-                //            Spacer()
-                //            Button {
-                //                checkIsPlaying()
-                //                playBarisVeBirlik()
-                //            } label: {
-                //                Text("BarisVeBirlik")
-                //            }
-                //            Spacer()
-                //            Button {
-                //                checkIsPlaying()
-                //                playBereketDenge()
-                //            } label: {
-                //                Text("BereketDenge")
-                //            }
+                            Button {
+                                currentVideo = "basariMp4"
+                                checkIsPlaying()
+                                withAnimation {
+                                    isHidden.toggle()
+                                }
+                                playBasari()
+                            } label: {
+                                if !isHidden {
+                                    Text("Basari")
+                                }
+                            }
+                            .padding()
+                            .background(Color.yellow)
+                            .foregroundColor(.black)
+                            .cornerRadius(8)
+                            .shadow(radius: 4)
+                            .padding()
+                            Button {
+                                currentVideo = "barisVeBirlikMp4"
+                                checkIsPlaying()
+                                withAnimation {
+                                    isHidden.toggle()
+                                }
+                                playBarisVeBirlik()
+                            } label: {
+                                Text("Baris & Birlik")
+                            }
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                            .shadow(radius: 4)
+                            .padding()
+                            Button {
+                                currentVideo = "bereketDengeMp4"
+                                checkIsPlaying()
+                                withAnimation {
+                                    isHidden.toggle()
+                                }
+                                playBereketDenge()
+                            } label: {
+                                Text("BereketDenge")
+                            }
+                            .padding()
+                            .background(Color.purple)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                            .shadow(radius: 4)
+                            .padding()
                 //            Spacer()
                 //            Button {
                 //                checkIsPlaying()
@@ -99,20 +122,39 @@ struct ContentView: View {
                 //                Text("528")
                 //            }
                 //            Spacer()
-                //            Button {
-                //                checkIsPlaying()
-                //                play4Cumle()
-                //            } label: {
-                //                Text("4 Cumle")
-                //            }
-                //            Spacer()
-                //            Button {
-                //                checkIsPlaying()
-                //                playMujde()
-                //            } label: {
-                //                Text("Mujde")
-                //            }
-                //            Spacer()
+                            Button {
+                                currentVideo = "4CumleMp4"
+                                checkIsPlaying()
+                                withAnimation {
+                                    isHidden.toggle()
+                                }
+                                play4Cumle()
+                            } label: {
+                                Text("4 Cumle")
+                            }
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                            .shadow(radius: 4)
+                            .padding()
+                
+                            Button {
+                                currentVideo = "mujdeMp4"
+                                checkIsPlaying()
+                                withAnimation {
+                                    isHidden.toggle()
+                                }
+                                playMujde()
+                            } label: {
+                                Text("Mujde")
+                            }
+                            .padding()
+                            .background(Color.orange)
+                            .foregroundColor(.black)
+                            .cornerRadius(8)
+                            .shadow(radius: 4)
+                            .padding()
             }
         }
         .onTapGesture {

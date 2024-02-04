@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		EA076E772B15DE71001A033C /* CalmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E762B15DE71001A033C /* CalmApp.swift */; };
-		EA076E792B15DE71001A033C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E782B15DE71001A033C /* ContentView.swift */; };
 		EA076E7E2B15DE72001A033C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA076E7D2B15DE72001A033C /* Preview Assets.xcassets */; };
 		EA076E852B15DF7F001A033C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E842B15DF7F001A033C /* AudioPlayer.swift */; };
 		EA2EA2F52B160369002D300E /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2EA2F32B160369002D300E /* 1.mp3 */; };
+		EA367F8C2B705027007EF775 /* nefesMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F882B705009007EF775 /* nefesMp4.mp4 */; };
+		EA367F8D2B705027007EF775 /* basariMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F892B705015007EF775 /* basariMp4.mp4 */; };
+		EA367F8E2B705027007EF775 /* 4CumleMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F8A2B705020007EF775 /* 4CumleMp4.mp4 */; };
+		EA367F8F2B705027007EF775 /* bereketDengeMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F8B2B705027007EF775 /* bereketDengeMp4.mp4 */; };
+		EA367F912B70502C007EF775 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA367F902B70502C007EF775 /* ContentView.swift */; };
+		EA367F932B7050E6007EF775 /* barisVeBirlikMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F922B7050E6007EF775 /* barisVeBirlikMp4.mp4 */; };
+		EA367F952B7051B3007EF775 /* mujdeMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F942B7051B2007EF775 /* mujdeMp4.mp4 */; };
 		EA37F1902B6EF28E00884AC4 /* nefes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */; };
 		EA37F1962B6EFA0B00884AC4 /* Bereket&Denge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */; };
 		EA37F1972B6EFA0B00884AC4 /* basari.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1922B6EFA0A00884AC4 /* basari.mp3 */; };
@@ -20,22 +26,23 @@
 		EA37F19A2B6EFA0B00884AC4 /* baris&birlik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */; };
 		EA7E92052B6E9377009FE024 /* 528.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA7E92042B6E9377009FE024 /* 528.mp3 */; };
 		EABA6E3E2B162B6100BBDC24 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EABA6E3D2B162B6100BBDC24 /* 2.mp3 */; };
-		EAC780562B7014B5001B9F63 /* i.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EAC780552B7014B5001B9F63 /* i.mp4 */; };
-		EAC780582B701643001B9F63 /* l.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EAC780572B701643001B9F63 /* l.mp4 */; };
-		EAC7805A2B70177C001B9F63 /* k.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EAC780592B70177C001B9F63 /* k.mp4 */; };
-		EAC7805C2B701811001B9F63 /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EAC7805B2B701811001B9F63 /* 4.mp4 */; };
-		EAC780622B701F24001B9F63 /* h.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EAC780612B701F24001B9F63 /* h.mp4 */; };
 		EAC780642B701F81001B9F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC780632B701F81001B9F63 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA076E732B15DE71001A033C /* Calm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA076E762B15DE71001A033C /* CalmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmApp.swift; sourceTree = "<group>"; };
-		EA076E782B15DE71001A033C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA076E7D2B15DE72001A033C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA076E842B15DF7F001A033C /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		EA076E862B15E25C001A033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EA2EA2F32B160369002D300E /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		EA367F882B705009007EF775 /* nefesMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nefesMp4.mp4; sourceTree = "<group>"; };
+		EA367F892B705015007EF775 /* basariMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = basariMp4.mp4; sourceTree = "<group>"; };
+		EA367F8A2B705020007EF775 /* 4CumleMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4CumleMp4.mp4; sourceTree = "<group>"; };
+		EA367F8B2B705027007EF775 /* bereketDengeMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bereketDengeMp4.mp4; sourceTree = "<group>"; };
+		EA367F902B70502C007EF775 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA367F922B7050E6007EF775 /* barisVeBirlikMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = barisVeBirlikMp4.mp4; sourceTree = "<group>"; };
+		EA367F942B7051B2007EF775 /* mujdeMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mujdeMp4.mp4; sourceTree = "<group>"; };
 		EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nefes.mp3; sourceTree = "<group>"; };
 		EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bereket&Denge.mp3"; sourceTree = "<group>"; };
 		EA37F1922B6EFA0A00884AC4 /* basari.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basari.mp3; sourceTree = "<group>"; };
@@ -44,11 +51,6 @@
 		EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "baris&birlik.mp3"; sourceTree = "<group>"; };
 		EA7E92042B6E9377009FE024 /* 528.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 528.mp3; sourceTree = "<group>"; };
 		EABA6E3D2B162B6100BBDC24 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
-		EAC780552B7014B5001B9F63 /* i.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = i.mp4; sourceTree = "<group>"; };
-		EAC780572B701643001B9F63 /* l.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = l.mp4; sourceTree = "<group>"; };
-		EAC780592B70177C001B9F63 /* k.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = k.mp4; sourceTree = "<group>"; };
-		EAC7805B2B701811001B9F63 /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
-		EAC780612B701F24001B9F63 /* h.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = h.mp4; sourceTree = "<group>"; };
 		EAC780632B701F81001B9F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +86,8 @@
 			children = (
 				EAC780632B701F81001B9F63 /* Assets.xcassets */,
 				EA076E862B15E25C001A033C /* Info.plist */,
+				EA367F902B70502C007EF775 /* ContentView.swift */,
 				EA076E762B15DE71001A033C /* CalmApp.swift */,
-				EA076E782B15DE71001A033C /* ContentView.swift */,
 				EA076E842B15DF7F001A033C /* AudioPlayer.swift */,
 				EA37F1932B6EFA0A00884AC4 /* 4cumle.mp3 */,
 				EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */,
@@ -96,11 +98,12 @@
 				EA7E92042B6E9377009FE024 /* 528.mp3 */,
 				EA2EA2F32B160369002D300E /* 1.mp3 */,
 				EABA6E3D2B162B6100BBDC24 /* 2.mp3 */,
-				EAC780552B7014B5001B9F63 /* i.mp4 */,
-				EAC780572B701643001B9F63 /* l.mp4 */,
-				EAC780592B70177C001B9F63 /* k.mp4 */,
-				EAC7805B2B701811001B9F63 /* 4.mp4 */,
-				EAC780612B701F24001B9F63 /* h.mp4 */,
+				EA367F8A2B705020007EF775 /* 4CumleMp4.mp4 */,
+				EA367F892B705015007EF775 /* basariMp4.mp4 */,
+				EA367F8B2B705027007EF775 /* bereketDengeMp4.mp4 */,
+				EA367F882B705009007EF775 /* nefesMp4.mp4 */,
+				EA367F922B7050E6007EF775 /* barisVeBirlikMp4.mp4 */,
+				EA367F942B7051B2007EF775 /* mujdeMp4.mp4 */,
 				EA076E7C2B15DE72001A033C /* Preview Content */,
 			);
 			path = Calm;
@@ -176,18 +179,19 @@
 				EABA6E3E2B162B6100BBDC24 /* 2.mp3 in Resources */,
 				EA37F1972B6EFA0B00884AC4 /* basari.mp3 in Resources */,
 				EA076E7E2B15DE72001A033C /* Preview Assets.xcassets in Resources */,
+				EA367F8D2B705027007EF775 /* basariMp4.mp4 in Resources */,
 				EA7E92052B6E9377009FE024 /* 528.mp3 in Resources */,
-				EAC7805C2B701811001B9F63 /* 4.mp4 in Resources */,
-				EAC780582B701643001B9F63 /* l.mp4 in Resources */,
 				EA37F1992B6EFA0B00884AC4 /* mujde.mp3 in Resources */,
+				EA367F952B7051B3007EF775 /* mujdeMp4.mp4 in Resources */,
 				EA2EA2F52B160369002D300E /* 1.mp3 in Resources */,
+				EA367F8F2B705027007EF775 /* bereketDengeMp4.mp4 in Resources */,
 				EA37F1982B6EFA0B00884AC4 /* 4cumle.mp3 in Resources */,
-				EAC780562B7014B5001B9F63 /* i.mp4 in Resources */,
 				EA37F19A2B6EFA0B00884AC4 /* baris&birlik.mp3 in Resources */,
-				EAC780622B701F24001B9F63 /* h.mp4 in Resources */,
+				EA367F8C2B705027007EF775 /* nefesMp4.mp4 in Resources */,
+				EA367F8E2B705027007EF775 /* 4CumleMp4.mp4 in Resources */,
+				EA367F932B7050E6007EF775 /* barisVeBirlikMp4.mp4 in Resources */,
 				EA37F1962B6EFA0B00884AC4 /* Bereket&Denge.mp3 in Resources */,
 				EAC780642B701F81001B9F63 /* Assets.xcassets in Resources */,
-				EAC7805A2B70177C001B9F63 /* k.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,9 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA076E792B15DE71001A033C /* ContentView.swift in Sources */,
 				EA076E772B15DE71001A033C /* CalmApp.swift in Sources */,
 				EA076E852B15DF7F001A033C /* AudioPlayer.swift in Sources */,
+				EA367F912B70502C007EF775 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
