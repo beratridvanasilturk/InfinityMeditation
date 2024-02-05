@@ -41,79 +41,30 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            
             VideoPlayerView(currentVideo: $currentVideo)
+            //                .frame(width: 300, height: 200)
                 .edgesIgnoringSafeArea(.all)
             
+            
+            Image("background")
+                .resizable()
+            //                    .frame(width: UIScreen().bounds.width / 3, height: 100, alignment: .center)
+                .edgesIgnoringSafeArea(.all)
+            //                    .background(Color.red)
+            //                    .opacity(0.3)
             VStack {
-                Button {
-                    currentVideo = ""
-                    currentVideo = "nefesMp4"
-                    checkIsPlaying()
-                    playNefes()
-                    withAnimation {
-                        isHidden.toggle()
+                VStack{
+                    Button {
+                        currentVideo = "bereketDengeMp4"
+                        checkIsPlaying()
+                        withAnimation {
+                            isHidden.toggle()
+                        }
+                        playBereketDenge()
                     }
-                } label: {
+                label: {
                     if !isHidden {
-                        Text("Nefes")
-                    }
-                }
-                .padding()
-                .background(Color.green)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .shadow(radius: 4)
-                .padding()
-                Button {
-                    currentVideo = ""
-                    currentVideo = "basariMp4"
-                    checkIsPlaying()
-                    withAnimation {
-                        isHidden.toggle()
-                    }
-                    playBasari()
-                } label: {
-                    if !isHidden {
-                        Text("Basari")
-                    }
-                }
-                .padding()
-                .background(Color.yellow)
-                .foregroundColor(.black)
-                .cornerRadius(8)
-                .shadow(radius: 4)
-                .padding()
-                Button {
-                    currentVideo = ""
-                    currentVideo = "barisVeBirlikMp4"
-                    checkIsPlaying()
-                    withAnimation {
-                        isHidden.toggle()
-                    }
-                    playBarisVeBirlik()
-                } label: {
-                    if !isHidden {
-                        Text("Baris & Birlik")
-                    }
-                }
-                .padding()
-                .background(Color.red)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .shadow(radius: 4)
-                .padding()
-                Button {
-                    currentVideo = ""
-                    currentVideo = "bereketDengeMp4"
-                    checkIsPlaying()
-                    withAnimation {
-                        isHidden.toggle()
-                    }
-                    playBereketDenge()
-                } label: {
-                    if !isHidden {
-                        Text("BereketDenge")
+                        Text("Taç Çakrası")
                     }
                 }
                 .padding()
@@ -122,28 +73,71 @@ struct ContentView: View {
                 .cornerRadius(8)
                 .shadow(radius: 4)
                 .padding()
+                    
+                    VStack {
+                        Button {
+                            currentVideo = "basariMp4"
+                            checkIsPlaying()
+                            withAnimation {
+                                isHidden.toggle()
+                            }
+                            playBasari()
+                        } label: {
+                            if !isHidden {
+                                Text("Üçüncü Göz")
+                            }
+                        }
+                        .padding()
+                        .background(Color.indigo)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        .shadow(radius: 4)
+                        .padding()
+                        
+                        Button {
+                            currentVideo = "nefesMp4"
+                            checkIsPlaying()
+                            playNefes()
+                            withAnimation {
+                                isHidden.toggle()
+                            }
+                        } label: {
+                            if !isHidden {
+                                Text("Boğaz Çakrası")
+                            }
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        .shadow(radius: 4)
+                        .padding()
+                    }
+                    .offset(y: -10)
+                }
+                .offset(y: -25)
+                
                 
                 Button {
-//                    currentVideo = ""
-//                    currentVideo = "4CumleMp4"
+                    currentVideo = "barisVeBirlikMp4"
                     checkIsPlaying()
                     withAnimation {
                         isHidden.toggle()
                     }
-                    playIletisim()
+                    playBarisVeBirlik()
                 } label: {
                     if !isHidden {
-                        Text("Iletisim")
+                        Text("Kalp Çakrası")
                     }
                 }
                 .padding()
-                .background(Color.teal)
+                .background(Color.green)
                 .foregroundColor(.white)
                 .cornerRadius(8)
                 .shadow(radius: 4)
                 .padding()
+                
                 Button {
-                    currentVideo = ""
                     currentVideo = "4CumleMp4"
                     checkIsPlaying()
                     withAnimation {
@@ -152,15 +146,18 @@ struct ContentView: View {
                     play4Cumle()
                 } label: {
                     if !isHidden {
-                        Text("4 Cumle")
+                        Text("Solar Plexus")
                     }
                 }
                 .padding()
-                .background(Color.blue)
+                .background(Color.yellow)
                 .foregroundColor(.white)
                 .cornerRadius(8)
                 .shadow(radius: 4)
                 .padding()
+                
+                
+                
                 
                 Button {
                     currentVideo = ""
@@ -172,26 +169,45 @@ struct ContentView: View {
                     playMujde()
                 } label: {
                     if !isHidden {
-                        Text("Mujde")
+                        Text("Sakral Çakra")
                     }
                 }
                 .padding()
                 .background(Color.orange)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
+                Button {
+                    currentVideo = "4CumleMp4"
+                    checkIsPlaying()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                    playIletisim()
+                } label: {
+                    if !isHidden {
+                        Text("Kök Çakrası")
+                    }
+                }
+                .padding()
+                .background(Color.red)
+                .foregroundColor(.white)
                 .cornerRadius(8)
                 .shadow(radius: 4)
                 .padding()
             }
         }
-        .onTapGesture { 
-                withAnimation {
-                    isHidden.toggle()
-                }
+        .onTapGesture {
+            withAnimation {
+                isHidden.toggle()
+            }
         }
         .onAppear{
             playNefes()
         }
     }
+    
     
     func playNefes() {
         isPlayingNefes = true
@@ -294,37 +310,37 @@ struct ContentView: View {
     func checkIsPlaying() {
         if isPlayingNefes == true {
             isPlayingNefes = false
-//            audioPlayNefes.pause()
+            //            audioPlayNefes.pause()
             audioPlayNefes.stop()
         }
         if isPlayingBasari == true {
             isPlayingBasari = false
-//            audioPlayBasari.pause()
+            //            audioPlayBasari.pause()
             audioPlayBasari.stop()
         }
         if isPlayingBarisVeBirlik == true {
             isPlayingBasari = false
-//            audioPlayBarisVeBirlik.pause()
+            //            audioPlayBarisVeBirlik.pause()
             audioPlayBarisVeBirlik.stop()
         }
         if isPlayingBereketDenge == true {
             isPlayingBereketDenge = false
-//            audioPlayBereketDenge.pause()
+            //            audioPlayBereketDenge.pause()
             audioPlayBereketDenge.stop()
         }
         if isPlaying4Cumle == true {
             isPlaying4Cumle = false
-//            audioPlay4Cumle.pause()
+            //            audioPlay4Cumle.pause()
             audioPlay4Cumle.stop()
         }
         if isPlayingIletisim == true {
             isPlayingIletisim = false
-//            audioPlayIletisim.pause()
+            //            audioPlayIletisim.pause()
             audioPlayIletisim.stop()
         }
         if isPlayingMujde == true {
             isPlayingMujde = false
-//            audioPlayMujde.pause()
+            //            audioPlayMujde.pause()
             audioPlayMujde.stop()
         }
     }
@@ -342,8 +358,6 @@ struct VideoPlayerView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIView {
         let avPlayer = AVPlayer(url: Bundle.main.url(forResource: currentVideo, withExtension: "mp4")!)
-        let player = VideoPlayer(player: avPlayer)
-        
         let playerLayer = AVPlayerLayer(player: avQueuePlayer)
         playerLayer.videoGravity = .resizeAspectFill
         
@@ -362,7 +376,7 @@ struct VideoPlayerView: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {
         guard let url = Bundle.main.url(forResource: currentVideo, withExtension: "mp4") else { return }
         let playerItem = AVPlayerItem(url: url)
-        
+        avQueuePlayer.pause()
         avQueuePlayer.removeAllItems()
         avQueuePlayer.replaceCurrentItem(with: playerItem)
         avQueuePlayer.play()

@@ -11,6 +11,7 @@
 		EA076E7E2B15DE72001A033C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA076E7D2B15DE72001A033C /* Preview Assets.xcassets */; };
 		EA076E852B15DF7F001A033C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E842B15DF7F001A033C /* AudioPlayer.swift */; };
 		EA1E5DBD2B716B440003D726 /* iletişim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA1E5DBC2B716B440003D726 /* iletişim.mp3 */; };
+		EA1E5DBF2B7174CD0003D726 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1E5DBE2B7174CD0003D726 /* background.png */; };
 		EA2EA2F52B160369002D300E /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2EA2F32B160369002D300E /* 1.mp3 */; };
 		EA367F8C2B705027007EF775 /* nefesMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F882B705009007EF775 /* nefesMp4.mp4 */; };
 		EA367F8D2B705027007EF775 /* basariMp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA367F892B705015007EF775 /* basariMp4.mp4 */; };
@@ -36,6 +37,7 @@
 		EA076E842B15DF7F001A033C /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		EA076E862B15E25C001A033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EA1E5DBC2B716B440003D726 /* iletişim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "iletişim.mp3"; sourceTree = "<group>"; };
+		EA1E5DBE2B7174CD0003D726 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EA2EA2F32B160369002D300E /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 		EA367F882B705009007EF775 /* nefesMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nefesMp4.mp4; sourceTree = "<group>"; };
 		EA367F892B705015007EF775 /* basariMp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = basariMp4.mp4; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */,
 				EA2EA2F32B160369002D300E /* 1.mp3 */,
 				EABA6E3D2B162B6100BBDC24 /* 2.mp3 */,
+				EA1E5DBE2B7174CD0003D726 /* background.png */,
 				EA367F8A2B705020007EF775 /* 4CumleMp4.mp4 */,
 				EA367F892B705015007EF775 /* basariMp4.mp4 */,
 				EA367F8B2B705027007EF775 /* bereketDengeMp4.mp4 */,
@@ -182,6 +185,7 @@
 				EA367F8D2B705027007EF775 /* basariMp4.mp4 in Resources */,
 				EA37F1992B6EFA0B00884AC4 /* mujde.mp3 in Resources */,
 				EA367F952B7051B3007EF775 /* mujdeMp4.mp4 in Resources */,
+				EA1E5DBF2B7174CD0003D726 /* background.png in Resources */,
 				EA2EA2F52B160369002D300E /* 1.mp3 in Resources */,
 				EA367F8F2B705027007EF775 /* bereketDengeMp4.mp4 in Resources */,
 				EA37F1982B6EFA0B00884AC4 /* 4cumle.mp3 in Resources */,
