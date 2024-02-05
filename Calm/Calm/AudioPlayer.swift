@@ -12,13 +12,6 @@ import AVFoundation
 class AudioPlayerManager: ObservableObject {
     
     private var audioPlayer: AVAudioPlayer!
-    private var audioPlayer2: AVAudioPlayer!
-    private var audioPlayNefes: AVAudioPlayer!
-    private var audioPlayBasari: AVAudioPlayer!
-    private var audioPlayBarisVeBirlik: AVAudioPlayer!
-    private var audioPlayBereketDenge: AVAudioPlayer!
-    private var audioPlay4Cumle: AVAudioPlayer!
-    private var audioPlay528: AVAudioPlayer!
     
      init() {
          do {
@@ -37,29 +30,14 @@ class AudioPlayerManager: ObservableObject {
             } catch {
                 print("Error playing audio: \(error.localizedDescription)")
             }
-        
-        do {
-            audioPlayer2 = try AVAudioPlayer(contentsOf: url)
-            audioPlayer2?.numberOfLoops = -1
-            audioPlayer2?.play()
-        } catch {
-            print("Error playing audio: \(error.localizedDescription)")
-        }
-        
-        
         }
 
     func pause() {
         audioPlayer?.pause()
-        
-            audioPlayer2?.pause()
     }
 
     func stop() {
         audioPlayer?.stop()
         audioPlayer = nil
-        
-            audioPlayer2?.stop()
-            audioPlayer2 = nil
     }
 }
