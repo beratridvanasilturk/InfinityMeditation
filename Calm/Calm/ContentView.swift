@@ -124,7 +124,8 @@ struct ContentView: View {
                 .padding()
                 
                 Button {
-                    currentVideo = ""
+//                    currentVideo = ""
+//                    currentVideo = "4CumleMp4"
                     checkIsPlaying()
                     withAnimation {
                         isHidden.toggle()
@@ -162,6 +163,7 @@ struct ContentView: View {
                 .padding()
                 
                 Button {
+                    currentVideo = ""
                     currentVideo = "mujdeMp4"
                     checkIsPlaying()
                     withAnimation {
@@ -181,12 +183,10 @@ struct ContentView: View {
                 .padding()
             }
         }
-        .onTapGesture {
-            if isHidden {
+        .onTapGesture { 
                 withAnimation {
                     isHidden.toggle()
                 }
-            }
         }
         .onAppear{
             playNefes()
@@ -267,11 +267,11 @@ struct ContentView: View {
         isPlayingMujde = true
         if let audioURL = Bundle.main.url(forResource: "mujde", withExtension: "mp3") {
             do {
-                audioPlayer1 = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayer1.volume = 0.40
+                audioPlayMujde = try AVAudioPlayer(contentsOf: audioURL)
+                audioPlayMujde.volume = 0.40
                 //                    audioPlayer1.volume = 0.45
-                audioPlayer1.numberOfLoops = -1
-                audioPlayer1.play()
+                audioPlayMujde.numberOfLoops = -1
+                audioPlayMujde.play()
             } catch {
             }
         }
@@ -293,22 +293,39 @@ struct ContentView: View {
     
     func checkIsPlaying() {
         if isPlayingNefes == true {
+            isPlayingNefes = false
+//            audioPlayNefes.pause()
             audioPlayNefes.stop()
         }
         if isPlayingBasari == true {
+            isPlayingBasari = false
+//            audioPlayBasari.pause()
             audioPlayBasari.stop()
         }
         if isPlayingBarisVeBirlik == true {
+            isPlayingBasari = false
+//            audioPlayBarisVeBirlik.pause()
             audioPlayBarisVeBirlik.stop()
         }
         if isPlayingBereketDenge == true {
+            isPlayingBereketDenge = false
+//            audioPlayBereketDenge.pause()
             audioPlayBereketDenge.stop()
         }
         if isPlaying4Cumle == true {
+            isPlaying4Cumle = false
+//            audioPlay4Cumle.pause()
             audioPlay4Cumle.stop()
         }
         if isPlayingIletisim == true {
+            isPlayingIletisim = false
+//            audioPlayIletisim.pause()
             audioPlayIletisim.stop()
+        }
+        if isPlayingMujde == true {
+            isPlayingMujde = false
+//            audioPlayMujde.pause()
+            audioPlayMujde.stop()
         }
     }
 }
