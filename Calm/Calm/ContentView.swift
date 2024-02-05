@@ -25,7 +25,7 @@ struct ContentView: View {
     @State private var audioPlayBarisVeBirlik: AVAudioPlayer!
     @State private var audioPlayBereketDenge: AVAudioPlayer!
     @State private var audioPlay4Cumle: AVAudioPlayer!
-    @State private var audioPlay528: AVAudioPlayer!
+    @State private var audioPlayIletisim: AVAudioPlayer!
     @State private var audioPlayMujde: AVAudioPlayer!
     
     @State private var isPlayingNefes = true
@@ -33,7 +33,7 @@ struct ContentView: View {
     @State private var isPlayingBarisVeBirlik = false
     @State private var isPlayingBereketDenge = false
     @State private var isPlaying4Cumle = false
-    @State private var isPlaying528 = false
+    @State private var isPlayingIletisim = false
     @State private var isPlayingMujde = false
     @State private var isPlaying = false
     
@@ -43,10 +43,11 @@ struct ContentView: View {
         ZStack {
             
             VideoPlayerView(currentVideo: $currentVideo)
-                        .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 Button {
+                    currentVideo = ""
                     currentVideo = "nefesMp4"
                     checkIsPlaying()
                     playNefes()
@@ -64,97 +65,120 @@ struct ContentView: View {
                 .cornerRadius(8)
                 .shadow(radius: 4)
                 .padding()
-                            Button {
-                                currentVideo = "basariMp4"
-                                checkIsPlaying()
-                                withAnimation {
-                                    isHidden.toggle()
-                                }
-                                playBasari()
-                            } label: {
-                                if !isHidden {
-                                    Text("Basari")
-                                }
-                            }
-                            .padding()
-                            .background(Color.yellow)
-                            .foregroundColor(.black)
-                            .cornerRadius(8)
-                            .shadow(radius: 4)
-                            .padding()
-                            Button {
-                                currentVideo = "barisVeBirlikMp4"
-                                checkIsPlaying()
-                                withAnimation {
-                                    isHidden.toggle()
-                                }
-                                playBarisVeBirlik()
-                            } label: {
-                                Text("Baris & Birlik")
-                            }
-                            .padding()
-                            .background(Color.red)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                            .shadow(radius: 4)
-                            .padding()
-                            Button {
-                                currentVideo = "bereketDengeMp4"
-                                checkIsPlaying()
-                                withAnimation {
-                                    isHidden.toggle()
-                                }
-                                playBereketDenge()
-                            } label: {
-                                Text("BereketDenge")
-                            }
-                            .padding()
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                            .shadow(radius: 4)
-                            .padding()
-                //            Spacer()
-                //            Button {
-                //                checkIsPlaying()
-                //                playNefes()
-                //            } label: {
-                //                Text("528")
-                //            }
-                //            Spacer()
-                            Button {
-                                currentVideo = "4CumleMp4"
-                                checkIsPlaying()
-                                withAnimation {
-                                    isHidden.toggle()
-                                }
-                                play4Cumle()
-                            } label: {
-                                Text("4 Cumle")
-                            }
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                            .shadow(radius: 4)
-                            .padding()
+                Button {
+                    currentVideo = ""
+                    currentVideo = "basariMp4"
+                    checkIsPlaying()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                    playBasari()
+                } label: {
+                    if !isHidden {
+                        Text("Basari")
+                    }
+                }
+                .padding()
+                .background(Color.yellow)
+                .foregroundColor(.black)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
+                Button {
+                    currentVideo = ""
+                    currentVideo = "barisVeBirlikMp4"
+                    checkIsPlaying()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                    playBarisVeBirlik()
+                } label: {
+                    if !isHidden {
+                        Text("Baris & Birlik")
+                    }
+                }
+                .padding()
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
+                Button {
+                    currentVideo = ""
+                    currentVideo = "bereketDengeMp4"
+                    checkIsPlaying()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                    playBereketDenge()
+                } label: {
+                    if !isHidden {
+                        Text("BereketDenge")
+                    }
+                }
+                .padding()
+                .background(Color.purple)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
                 
-                            Button {
-                                currentVideo = "mujdeMp4"
-                                checkIsPlaying()
-                                withAnimation {
-                                    isHidden.toggle()
-                                }
-                                playMujde()
-                            } label: {
-                                Text("Mujde")
-                            }
-                            .padding()
-                            .background(Color.orange)
-                            .foregroundColor(.black)
-                            .cornerRadius(8)
-                            .shadow(radius: 4)
-                            .padding()
+                Button {
+                    currentVideo = ""
+                    checkIsPlaying()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                    playIletisim()
+                } label: {
+                    if !isHidden {
+                        Text("Iletisim")
+                    }
+                }
+                .padding()
+                .background(Color.teal)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
+                Button {
+                    currentVideo = ""
+                    currentVideo = "4CumleMp4"
+                    checkIsPlaying()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                    play4Cumle()
+                } label: {
+                    if !isHidden {
+                        Text("4 Cumle")
+                    }
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
+                
+                Button {
+                    currentVideo = "mujdeMp4"
+                    checkIsPlaying()
+                    withAnimation {
+                        isHidden.toggle()
+                    }
+                    playMujde()
+                } label: {
+                    if !isHidden {
+                        Text("Mujde")
+                    }
+                }
+                .padding()
+                .background(Color.orange)
+                .foregroundColor(.black)
+                .cornerRadius(8)
+                .shadow(radius: 4)
+                .padding()
             }
         }
         .onTapGesture {
@@ -253,15 +277,15 @@ struct ContentView: View {
         }
     }
     
-    func play528Hz() {
-        isPlaying528 = true
-        if let audioURL = Bundle.main.url(forResource: "528", withExtension: "mp3") {
+    func playIletisim() {
+        isPlayingIletisim = true
+        if let audioURL = Bundle.main.url(forResource: "iletişim", withExtension: "mp3") {
             do {
-                audioPlay528 = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlay528.volume = 0.40
+                audioPlayIletisim = try AVAudioPlayer(contentsOf: audioURL)
+                audioPlayIletisim.volume = 0.40
                 //                    audioPlayer1.volume = 0.45
-                audioPlay528.numberOfLoops = -1
-                audioPlay528.play()
+                audioPlayIletisim.numberOfLoops = -1
+                audioPlayIletisim.play()
             } catch {
             }
         }
@@ -283,8 +307,8 @@ struct ContentView: View {
         if isPlaying4Cumle == true {
             audioPlay4Cumle.stop()
         }
-        if isPlaying528 == true {
-            audioPlay528.stop()
+        if isPlayingIletisim == true {
+            audioPlayIletisim.stop()
         }
     }
 }
@@ -297,7 +321,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct VideoPlayerView: UIViewRepresentable {
     @Binding var currentVideo: String
-       var avQueuePlayer = AVQueuePlayer()
+    var avQueuePlayer = AVQueuePlayer()
     
     func makeUIView(context: Context) -> UIView {
         let avPlayer = AVPlayer(url: Bundle.main.url(forResource: currentVideo, withExtension: "mp4")!)
@@ -309,19 +333,19 @@ struct VideoPlayerView: UIViewRepresentable {
         let view = UIView(frame: UIScreen.main.bounds)
         
         // 90 derece saga yatirir ekrani
-//        playerLayer.transform = CATransform3DMakeRotation(.pi / 2, 0, 0, 1)
-               
-               playerLayer.frame = view.frame
-               view.layer.addSublayer(playerLayer)
-               
+        //        playerLayer.transform = CATransform3DMakeRotation(.pi / 2, 0, 0, 1)
+        
+        playerLayer.frame = view.frame
+        view.layer.addSublayer(playerLayer)
+        
         avQueuePlayer.play()
         return view
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
         guard let url = Bundle.main.url(forResource: currentVideo, withExtension: "mp4") else { return }
-               let playerItem = AVPlayerItem(url: url)
-               
+        let playerItem = AVPlayerItem(url: url)
+        
         avQueuePlayer.removeAllItems()
         avQueuePlayer.replaceCurrentItem(with: playerItem)
         avQueuePlayer.play()
