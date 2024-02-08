@@ -13,6 +13,11 @@ import AVKit
 
 struct ContentView: View {
     
+    // Tutorial denetimi icin kullanilir
+    @State private var showWalkthrough = false
+    @AppStorage("hasViewedWalkthrough")
+    var hasViewedWalkthrough: Bool = false
+    
     // Button Hide
     @State private var isHidden = false
     
@@ -241,6 +246,11 @@ struct ContentView: View {
         }
         .onAppear{
             playNefes()
+            showWalkthrough = hasViewedWalkthrough ? false : true
+        }
+        
+        .sheet(isPresented: $showWalkthrough) {
+            TutorialViewInContents()
         }
     }
     
@@ -390,7 +400,7 @@ struct ContentView_Previews: PreviewProvider {
 struct InfoView: View {
     var body: some View {
         VStack {
-            Text("Sonsuz Meditasyon telefonun ekranı kapalıyken ve internet bağlantısı gerektirmeden geceleri uyku meditasyonu olarak kullanmanız için tasarlanmıştır. Uygulamayı sonlandırana kadar meditasyon sonsuza kadar devam eder.")
+            Text("Sonsuz Meditasyon telefonun ekranı kapalıyken ve internet bağlantısı gerektirmeden geceleri uyku meditasyonu olarak kullanmanız için tasarlanmıştır. Uygulamayı sonlandırana kadar meditasyon sonsuz döngüde devam eder.")
                 .padding()
                 .background(Color.gray)
                 .foregroundColor(.black)
