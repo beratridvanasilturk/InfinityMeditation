@@ -55,34 +55,37 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.bottom)
                 .opacity(0.2)
             VStack {
-                Spacer()
-                        Button(action: {
-                            withAnimation {
-                                self.isInfoVisible.toggle()
-                                isHidden = true
-                            }
-                        }) {
-                            HStack {
-                                Image(systemName: "info.circle")
-                                    .padding()
-                                    .foregroundColor(.gray)
-                                    .opacity(0.7)
-                            }
-                            .alignmentGuide(HorizontalAlignment.trailing) { d in
-                                       d[HorizontalAlignment.trailing]
-                                   }
-                            .alignmentGuide(VerticalAlignment.top) { d in
-                                d[VerticalAlignment.top]
-                            }
-                            .padding()
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        withAnimation {
+                            self.isInfoVisible.toggle()
+                            isHidden = true
                         }
-                        
-                        if isInfoVisible {
-                            InfoView()
-                                .transition(.move(edge: .bottom))
+                    }) {
+                        HStack {
+                            Image(systemName: "info.circle")
+                                .padding()
+                                .foregroundColor(.gray)
+                                .opacity(0.7)
                         }
+                        .alignmentGuide(HorizontalAlignment.trailing) { d in
+                            d[HorizontalAlignment.trailing]
+                        }
+                        .alignmentGuide(VerticalAlignment.top) { d in
+                            d[VerticalAlignment.top]
+                        }
+                        .padding()
                     }
-          
+                }
+                .offset(x: 165)
+                
+                if isInfoVisible {
+                    InfoView()
+                        .transition(.move(edge: .bottom))
+                }
+            }
+            
             VStack {
                 Button {
                     currentVideo = "bereketDengeMp4"
@@ -96,7 +99,7 @@ struct ContentView: View {
                 if !isHidden {
                     Text("Taç Çakrası")
                         .font(.subheadline)
-
+                    
                 }
             }
             .padding(8)
@@ -117,7 +120,7 @@ struct ContentView: View {
                     if !isHidden {
                         Text("Üçüncü Göz")
                             .font(.subheadline)
-
+                        
                     }
                 }
                 .padding(8)
@@ -138,7 +141,7 @@ struct ContentView: View {
                     if !isHidden {
                         Text("Boğaz Çakrası")
                             .font(.subheadline)
-
+                        
                     }
                 }
                 .padding(8)
@@ -161,7 +164,7 @@ struct ContentView: View {
                     if !isHidden {
                         Text("Kalp Çakrası")
                             .font(.subheadline)
-
+                        
                     }
                 }
                 .padding(8)
@@ -183,7 +186,7 @@ struct ContentView: View {
                     if !isHidden {
                         Text("Solar Plexus")
                             .font(.subheadline)
-
+                        
                     }
                 }
                 .padding(8)
@@ -206,7 +209,7 @@ struct ContentView: View {
                     if !isHidden {
                         Text("Sakral Çakra")
                             .font(.subheadline)
-
+                        
                     }
                 }
                 .padding(8)
@@ -236,7 +239,7 @@ struct ContentView: View {
                 .shadow(radius: 4)
                 .padding()
                 .offset(y: 20)
-        }
+            }
         }
         .onTapGesture {
             withAnimation {
@@ -259,7 +262,7 @@ struct ContentView: View {
         if let audioURL = Bundle.main.url(forResource: "nefes", withExtension: "mp3") {
             do {
                 audioPlayNefes = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayNefes.volume = 0.40
+                audioPlayNefes.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
                 audioPlayNefes.numberOfLoops = -1
                 audioPlayNefes.play()
@@ -273,7 +276,7 @@ struct ContentView: View {
         if let audioURL = Bundle.main.url(forResource: "basari", withExtension: "mp3") {
             do {
                 audioPlayBasari = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayBasari.volume = 0.40
+                audioPlayBasari.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
                 audioPlayBasari.numberOfLoops = -1
                 audioPlayBasari.play()
@@ -287,7 +290,7 @@ struct ContentView: View {
         if let audioURL = Bundle.main.url(forResource: "baris&birlik", withExtension: "mp3") {
             do {
                 audioPlayBarisVeBirlik = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayBarisVeBirlik.volume = 0.40
+                audioPlayBarisVeBirlik.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
                 audioPlayBarisVeBirlik.numberOfLoops = -1
                 audioPlayBarisVeBirlik.play()
@@ -301,7 +304,7 @@ struct ContentView: View {
         if let audioURL = Bundle.main.url(forResource: "Bereket&Denge", withExtension: "mp3") {
             do {
                 audioPlayBereketDenge = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayBereketDenge.volume = 0.40
+                audioPlayBereketDenge.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
                 audioPlayBereketDenge.numberOfLoops = -1
                 audioPlayBereketDenge.play()
@@ -315,7 +318,7 @@ struct ContentView: View {
         if let audioURL = Bundle.main.url(forResource: "4cumle", withExtension: "mp3") {
             do {
                 audioPlay4Cumle = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlay4Cumle.volume = 0.40
+                audioPlay4Cumle.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
                 audioPlay4Cumle.numberOfLoops = -1
                 audioPlay4Cumle.play()
@@ -329,7 +332,7 @@ struct ContentView: View {
         if let audioURL = Bundle.main.url(forResource: "mujde", withExtension: "mp3") {
             do {
                 audioPlayMujde = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayMujde.volume = 0.40
+                audioPlayMujde.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
                 audioPlayMujde.numberOfLoops = -1
                 audioPlayMujde.play()
@@ -343,7 +346,7 @@ struct ContentView: View {
         if let audioURL = Bundle.main.url(forResource: "iletişim", withExtension: "mp3") {
             do {
                 audioPlayIletisim = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayIletisim.volume = 0.40
+                audioPlayIletisim.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
                 audioPlayIletisim.numberOfLoops = -1
                 audioPlayIletisim.play()
@@ -400,7 +403,7 @@ struct ContentView_Previews: PreviewProvider {
 struct InfoView: View {
     var body: some View {
         VStack {
-            Text("Sonsuz Meditasyon telefonun ekranı kapalıyken ve internet bağlantısı gerektirmeden geceleri uyku meditasyonu olarak kullanmanız için tasarlanmıştır. Uygulamayı sonlandırana kadar meditasyon sonsuz döngüde devam eder.")
+            Text("Sonsuz Meditasyon telefonun ekranı kapalıyken ve internet bağlantısı gerektirmeden geceleri uyku meditasyonu olarak kullanmanız için tasarlanmıştır. Uygulamayı sonlandırana kadar meditasyon sonsuz döngüde devam eder. Ekranı kapatmayı veya farklı uygulamalarda gezinmeyi deneyebilirsiniz.")
                 .padding()
                 .background(Color.gray)
                 .foregroundColor(.black)
@@ -413,24 +416,24 @@ struct InfoView: View {
 //struct VideoPlayerView: UIViewRepresentable {
 //    @Binding var currentVideo: String
 //    var avQueuePlayer = AVQueuePlayer()
-//    
+//
 //    func makeUIView(context: Context) -> UIView {
 //        let avPlayer = AVPlayer(url: Bundle.main.url(forResource: currentVideo, withExtension: "mp4")!)
 //        let playerLayer = AVPlayerLayer(player: avQueuePlayer)
 //        playerLayer.videoGravity = .resizeAspectFill
-//        
+//
 //        let view = UIView(frame: UIScreen.main.bounds)
-//        
+//
 //        // 90 derece saga yatirir ekrani
 //        //        playerLayer.transform = CATransform3DMakeRotation(.pi / 2, 0, 0, 1)
-//        
+//
 //        playerLayer.frame = view.frame
 //        view.layer.addSublayer(playerLayer)
-//        
+//
 //        avQueuePlayer.play()
 //        return view
 //    }
-//    
+//
 //    func updateUIView(_ uiView: UIView, context: Context) {
 //        guard let url = Bundle.main.url(forResource: currentVideo, withExtension: "mp4") else { return }
 //        let playerItem = AVPlayerItem(url: url)
