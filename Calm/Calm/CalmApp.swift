@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CalmApp: App {
-    @AppStorage("isDarkMode") private var isDarkMode = true
+//    @AppStorage("isDarkMode") private var isDarkMode = true
     var body: some Scene {
         WindowGroup {
             TabView{
@@ -23,9 +23,14 @@ struct CalmApp: App {
                         Image("chakras")
                         Text("Chakras")
                     }
+                ShareView()
+                    .tabItem {
+                        Image("more")
+                        Text("Share")
+                    }
             }
             .accentColor(Color.purple)
-            .preferredColorScheme(isDarkMode ? .dark : .light)
+//            .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

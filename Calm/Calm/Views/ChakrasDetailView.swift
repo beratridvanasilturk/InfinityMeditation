@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct SheetView: View {
     @Binding var buttonText: String
     // Sheet dissmis'da kullanilir 
@@ -15,20 +14,24 @@ struct SheetView: View {
     var body: some View {
         ScrollView{
             VStack {
-                Text("Sheet İçeriği")
+                Text("Çakra İçeriği:")
+                    .foregroundColor(.green)
                     .font(.headline)
-                    .padding()
+                    .padding(20)
                 
                 Text("\(buttonText)")
-                    .foregroundColor(.white)
-                    .padding(30)
+                    .foregroundColor(.gray)
+                    .padding(20)
                 
                 
                 Button("Kapat") {
                     presentationMode.wrappedValue.dismiss()
                 }
+                .foregroundColor(.blue)
                 .padding()
             }
         }
     }
 }
+
+

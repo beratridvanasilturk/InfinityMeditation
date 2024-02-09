@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ChakrasView: View {
     
-    
     @State private var isSheetPresented = false
     @State private var sheetText = ""
     
@@ -34,7 +33,6 @@ struct ChakrasView: View {
     
     // Button Hide
     @State private var isHidden = false
-    @State private var isChakraInfoVisible = false
     
     var body: some View {
         ZStack {
@@ -42,6 +40,13 @@ struct ChakrasView: View {
                 .edgesIgnoringSafeArea(.bottom)
                 .opacity(0.2)
             VStack {
+                VStack {
+                Text("Çakralar Hakkında")
+                    .bold()
+                    .font(.largeTitle)
+                    .padding()
+                    .offset(y: -80)
+            }
                 Button {
                     sheetText = tacCakraText
                     isSheetPresented.toggle()
@@ -211,14 +216,17 @@ struct ChakrasView: View {
                 .padding()
                 .offset(y: 20)
             }
+            .offset(y: -30)
         }
         .onTapGesture {
             withAnimation {
-                isChakraInfoVisible = false
                 isHidden.toggle()
             }
         }
         .onAppear{
+            withAnimation {
+                isHidden = true
+            }
             showWalkthrough = hasViewedWalkthrough ? false : true
         }
         

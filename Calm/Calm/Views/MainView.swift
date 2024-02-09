@@ -56,6 +56,8 @@ struct MainView: View {
                 .opacity(0.2)
             VStack {
                 VStack {
+                  
+                    
                     Spacer()
                     Button(action: {
                         withAnimation {
@@ -78,11 +80,11 @@ struct MainView: View {
                         .padding()
                     }
                 }
-                .offset(x: 165)
+                .offset(x: 160)
                 
                 if isInfoVisible {
                     InfoView()
-                        .transition(.move(edge: .bottom))
+                        .transition(.move(edge: .leading))
                 }
             }
             
@@ -248,8 +250,13 @@ struct MainView: View {
             }
         }
         .onAppear{
-            playNefes()
+            withAnimation {
+                isHidden = true
+            }
             showWalkthrough = hasViewedWalkthrough ? false : true
+        }
+        .onLoad{
+            playNefes()
         }
         
         .sheet(isPresented: $showWalkthrough) {
@@ -411,6 +418,34 @@ struct InfoView: View {
                 .cornerRadius(10)
         }
     }
+}
+
+extension View {
+
+    func onLoad(perform action: (() -> Void)? = nil) -> some View {
+        modifier(ViewDidLoadModifier(perform: action))
+    }
+
+}
+
+struct ViewDidLoadModifier: ViewModifier {
+
+    @State private var didLoad = false
+    private let action: (() -> Void)?
+
+    init(perform action: (() -> Void)? = nil) {
+        self.action = action
+    }
+
+    func body(content: Content) -> some View {
+        content.onAppear {
+            if didLoad == false {
+                didLoad = true
+                action?()
+            }
+        }
+    }
+
 }
 
 //struct VideoPlayerView: UIViewRepresentable {
