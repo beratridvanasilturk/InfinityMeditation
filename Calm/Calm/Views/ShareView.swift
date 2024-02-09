@@ -17,30 +17,49 @@ struct ShareView: View {
         VStack{
             
             
-            Text("Sonsuz Meditasyon hakkındaki düşüncelerin bizler için önemli.")
-            
+            Text("∞ Meditasyon hakkındaki düşüncelerin bizler için önemli.")
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .foregroundColor(.indigo)
+                .padding(30)
             Text("Lutfen bizlere kendimizi geliştirmemiz için geri bildirimde bulunmayi unutma.")
-            
+                .font(.callout)
+                .bold()
+            .multilineTextAlignment(.center)
+                .foregroundColor(.indigo)
+                .padding(30)
             Button(action: {
                 if UIApplication.shared.canOpenURL(reviewURL!) {
                     UIApplication.shared.open(reviewURL!)
                 }}) {
-                Text("Yorum Yap")
+                    Text("Yorum Yap")
+                        .bold()
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding()
+                        .background(.yellow)
+                        .cornerRadius(11)
             }
-            .padding(20)
+            .padding(30)
             
             Text("Ayrıca ∞ Meditasyonu beğendiysen arkadaşlarınla ve çevrenle paylaşabilirsin.")
+                .bold()
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .font(.callout)
+                .foregroundColor(.gray)
             
+                .padding()
             Button(action: {
                 isShareSheetPresented.toggle()
             }, label: {
                 Text("Paylaş")
-                    .padding(10)
-                    .padding(.horizontal, 10)
-                    .background(Color("appOrangeColor"))
-                    .cornerRadius(11)
+                    .bold()
                     .font(.headline)
-                    .offset(y: -10)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.indigo)
+                    .cornerRadius(11)
             })
             .sheet(isPresented: $isShareSheetPresented, content: {
                 ShareSheet(activityItems: [shareText])

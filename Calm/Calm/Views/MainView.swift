@@ -66,7 +66,10 @@ struct MainView: View {
                         }
                     }) {
                         HStack {
-                            Image(systemName: "info.circle")
+                            Image("info")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40, alignment: .center)
                                 .padding()
                                 .foregroundColor(.gray)
                                 .opacity(0.7)
@@ -251,6 +254,7 @@ struct MainView: View {
         }
         .onAppear{
             withAnimation {
+                isInfoVisible = false
                 isHidden = true
             }
             showWalkthrough = hasViewedWalkthrough ? false : true
@@ -410,12 +414,12 @@ struct ContentView_Previews: PreviewProvider {
 struct InfoView: View {
     var body: some View {
         VStack {
-            Text("Sonsuz Meditasyon telefonun ekranı kapalıyken ve internet bağlantısı gerektirmeden geceleri uyku meditasyonu olarak kullanmanız için tasarlanmıştır. Uygulamayı sonlandırana kadar meditasyon sonsuz döngüde devam eder. Ekranı kapatmayı veya farklı uygulamalarda gezinmeyi deneyebilirsiniz.")
+            Text("Sonsuz Meditasyon telefonun ekranı kapalıyken ve internet bağlantısı gerektirmeden geceleri uyku meditasyonu olarak kullanmanız amacıyla basit ve sade olarak tasarlanmıştır. Uygulamayı sonlandırana kadar meditasyon sonsuz döngüde devam eder. Ekranı kapatarak meditasyon yapmayı veya farklı uygulamalarda gezinmeyi deneyebilirsiniz.")
                 .padding()
-                .background(Color.gray)
-                .foregroundColor(.black)
+                .background(.cyan)
+                .foregroundColor(.white)
                 .font(.subheadline)
-                .cornerRadius(10)
+                .cornerRadius(30)
         }
     }
 }

@@ -71,7 +71,7 @@ struct TutorialViewInContents: View {
             }
             .padding(.bottom)
         }
-        .background(Color("appOrangeColor"))
+        .background(Color.yellow)
     }
 }
 
@@ -93,15 +93,12 @@ struct TutorialPageInContents: View {
                     .multilineTextAlignment(.center)
                     .font(.headline)
                     .padding()
-                    .foregroundColor(.white)
                     .opacity(0.7)
                 
                 Text(subHeading)
                     .bold()
                     .font(.body)
                     .lineLimit(10)
-                    .foregroundColor(.white)
-//                    .opacity(0.9)
                     .multilineTextAlignment(.center)
             }
             .padding(.horizontal, 10)

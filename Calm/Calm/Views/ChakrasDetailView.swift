@@ -14,10 +14,13 @@ struct SheetView: View {
     var body: some View {
         ScrollView{
             VStack {
-                Text("Çakra İçeriği:")
-                    .foregroundColor(.green)
+                Text("Çakra İçeriği")
+                    .bold()
+                    .foregroundColor(.indigo)
                     .font(.headline)
-                    .padding(20)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .padding(.top, 30)
                 
                 Text("\(buttonText)")
                     .foregroundColor(.gray)
@@ -27,8 +30,13 @@ struct SheetView: View {
                 Button("Kapat") {
                     presentationMode.wrappedValue.dismiss()
                 }
-                .foregroundColor(.blue)
+                .foregroundColor(.black)
+                .font(.headline)
+                .multilineTextAlignment(.center)
                 .padding()
+                .background(.yellow)
+                .cornerRadius(12)
+                .padding(.bottom, 20)
             }
         }
     }
