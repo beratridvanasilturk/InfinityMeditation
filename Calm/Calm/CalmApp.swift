@@ -24,6 +24,7 @@ struct CalmApp: App {
                         Text("Chakras")
                     }
             }
+            .accentColor(Color.purple)
             .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
