@@ -11,7 +11,7 @@ import SwiftUI
 import AVFoundation
 import AVKit
 
-struct ContentView: View {
+struct MainView: View {
     
     // Tutorial denetimi icin kullanilir
     @State private var showWalkthrough = false
@@ -396,7 +396,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
 

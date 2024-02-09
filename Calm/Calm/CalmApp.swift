@@ -12,8 +12,19 @@ struct CalmApp: App {
     @AppStorage("isDarkMode") private var isDarkMode = true
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .preferredColorScheme(isDarkMode ? .dark : .light)
+            TabView{
+                MainView()
+                    .tabItem {
+                        Image("infinity")
+                        Text("Main")
+                    }
+                ChakrasView()
+                    .tabItem {
+                        Image("chakras")
+                        Text("Chakras")
+                    }
+            }
+            .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

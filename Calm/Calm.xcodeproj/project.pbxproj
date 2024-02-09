@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981FAB142B766E7C005AFBE3 /* ChakrasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FAB132B766E7C005AFBE3 /* ChakrasView.swift */; };
 		983EB7392B754CD9001B8E86 /* TutorialViewInContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EB7382B754CD9001B8E86 /* TutorialViewInContents.swift */; };
 		983EB73C2B755914001B8E86 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 983EB73E2B755914001B8E86 /* Localizable.strings */; };
 		EA076E772B15DE71001A033C /* CalmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E762B15DE71001A033C /* CalmApp.swift */; };
@@ -14,7 +15,7 @@
 		EA076E852B15DF7F001A033C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E842B15DF7F001A033C /* AudioPlayer.swift */; };
 		EA1E5DBD2B716B440003D726 /* iletişim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA1E5DBC2B716B440003D726 /* iletişim.mp3 */; };
 		EA2EA2F52B160369002D300E /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2EA2F32B160369002D300E /* 1.mp3 */; };
-		EA367F912B70502C007EF775 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA367F902B70502C007EF775 /* ContentView.swift */; };
+		EA367F912B70502C007EF775 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA367F902B70502C007EF775 /* MainView.swift */; };
 		EA37F1902B6EF28E00884AC4 /* nefes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */; };
 		EA37F1962B6EFA0B00884AC4 /* Bereket&Denge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */; };
 		EA37F1972B6EFA0B00884AC4 /* basari.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1922B6EFA0A00884AC4 /* basari.mp3 */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		981FAB132B766E7C005AFBE3 /* ChakrasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChakrasView.swift; sourceTree = "<group>"; };
 		983EB7382B754CD9001B8E86 /* TutorialViewInContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewInContents.swift; sourceTree = "<group>"; };
 		983EB73D2B755914001B8E86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		983EB73F2B755F1C001B8E86 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 		EA076E862B15E25C001A033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EA1E5DBC2B716B440003D726 /* iletişim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "iletişim.mp3"; sourceTree = "<group>"; };
 		EA2EA2F32B160369002D300E /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
-		EA367F902B70502C007EF775 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA367F902B70502C007EF775 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA37F18F2B6EF28E00884AC4 /* nefes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nefes.mp3; sourceTree = "<group>"; };
 		EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bereket&Denge.mp3"; sourceTree = "<group>"; };
 		EA37F1922B6EFA0A00884AC4 /* basari.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basari.mp3; sourceTree = "<group>"; };
@@ -58,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		981FAB152B766E98005AFBE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA367F902B70502C007EF775 /* MainView.swift */,
+				981FAB132B766E7C005AFBE3 /* ChakrasView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EA076E6A2B15DE71001A033C = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +90,8 @@
 			children = (
 				EAC780632B701F81001B9F63 /* Assets.xcassets */,
 				EA076E862B15E25C001A033C /* Info.plist */,
-				EA367F902B70502C007EF775 /* ContentView.swift */,
 				EA076E762B15DE71001A033C /* CalmApp.swift */,
+				981FAB152B766E98005AFBE3 /* Views */,
 				EA076E842B15DF7F001A033C /* AudioPlayer.swift */,
 				983EB7382B754CD9001B8E86 /* TutorialViewInContents.swift */,
 				983EB73E2B755914001B8E86 /* Localizable.strings */,
@@ -189,7 +200,8 @@
 			files = (
 				EA076E772B15DE71001A033C /* CalmApp.swift in Sources */,
 				EA076E852B15DF7F001A033C /* AudioPlayer.swift in Sources */,
-				EA367F912B70502C007EF775 /* ContentView.swift in Sources */,
+				981FAB142B766E7C005AFBE3 /* ChakrasView.swift in Sources */,
+				EA367F912B70502C007EF775 /* MainView.swift in Sources */,
 				983EB7392B754CD9001B8E86 /* TutorialViewInContents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Calm/Preview Content\"";
 				DEVELOPMENT_TEAM = 899LNTN484;
 				ENABLE_PREVIEWS = YES;
@@ -340,6 +352,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,7 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Calm/Preview Content\"";
 				DEVELOPMENT_TEAM = 899LNTN484;
 				ENABLE_PREVIEWS = YES;
@@ -373,6 +386,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
