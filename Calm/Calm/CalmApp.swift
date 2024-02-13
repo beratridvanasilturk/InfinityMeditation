@@ -16,17 +16,17 @@ struct CalmApp: App {
                 MainView()
                     .tabItem {
                         Image("infinity")
-                        Text("Main")
+                        Text("∞ Meditasyon")
                     }
                 ChakrasView()
                     .tabItem {
                         Image("chakras")
-                        Text("Chakras")
+                        Text("Çakralar")
                     }
                 ShareView()
                     .tabItem {
                         Image("more")
-                        Text("Share")
+                        Text("Paylaş")
                     }
             }
             .accentColor(Color.purple)

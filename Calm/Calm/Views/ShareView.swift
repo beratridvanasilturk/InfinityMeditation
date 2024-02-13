@@ -10,8 +10,8 @@ import SwiftUI
 struct ShareView: View {
     
     @State private var isShareSheetPresented = false
-    let shareText = "https://apps.apple.com/tr/developer/berat-ridvan-asilturk/id1709821684"
-    let reviewURL = URL(string: "https://apps.apple.com/tr/developer/berat-ridvan-asilturk/id1709821684")
+    let shareText = "https://apps.apple.com/tr/app/meditation/id6477408670?platform=iphone"
+    let reviewURL = URL(string: "https://apps.apple.com/tr/app/meditation/id6477408670?platform=iphone")
     
     var body: some View {
         VStack{
@@ -22,10 +22,10 @@ struct ShareView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(.indigo)
                 .padding(30)
-            Text("Lutfen bizlere kendimizi geliştirmemiz için geri bildirimde bulunmayi unutma.")
+            Text("Lutfen bizlere geri bildirimde bulunmayı unutma.")
                 .font(.callout)
                 .bold()
-            .multilineTextAlignment(.center)
+                .multilineTextAlignment(.center)
                 .foregroundColor(.indigo)
                 .padding(30)
             Button(action: {
@@ -39,8 +39,8 @@ struct ShareView: View {
                         .padding()
                         .background(.yellow)
                         .cornerRadius(11)
-            }
-            .padding(30)
+                }
+                .padding(30)
             
             Text("Ayrıca ∞ Meditasyonu beğendiysen arkadaşlarınla ve çevrenle paylaşabilirsin.")
                 .bold()
@@ -53,7 +53,7 @@ struct ShareView: View {
             Button(action: {
                 isShareSheetPresented.toggle()
             }, label: {
-                Text("Paylaş")
+                Text("∞ Meditasyon'u Paylaş")
                     .bold()
                     .font(.headline)
                     .foregroundColor(.white)

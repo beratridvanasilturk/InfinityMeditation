@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SheetView: View {
     @Binding var buttonText: String
-    // Sheet dissmis'da kullanilir 
+    // Sheet dissmis'da kullanilir
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ScrollView{

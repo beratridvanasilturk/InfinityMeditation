@@ -12,6 +12,7 @@
 		981FAB192B76B616005AFBE3 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981FAB182B76B616005AFBE3 /* ShareView.swift */; };
 		983EB7392B754CD9001B8E86 /* TutorialViewInContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983EB7382B754CD9001B8E86 /* TutorialViewInContents.swift */; };
 		983EB73C2B755914001B8E86 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 983EB73E2B755914001B8E86 /* Localizable.strings */; };
+		986FAB6C2B7BA1A4004D731E /* kalp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 986FAB6B2B7BA1A4004D731E /* kalp.mp3 */; };
 		EA076E772B15DE71001A033C /* CalmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E762B15DE71001A033C /* CalmApp.swift */; };
 		EA076E7E2B15DE72001A033C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA076E7D2B15DE72001A033C /* Preview Assets.xcassets */; };
 		EA076E852B15DF7F001A033C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076E842B15DF7F001A033C /* AudioPlayer.swift */; };
@@ -23,7 +24,6 @@
 		EA37F1972B6EFA0B00884AC4 /* basari.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1922B6EFA0A00884AC4 /* basari.mp3 */; };
 		EA37F1982B6EFA0B00884AC4 /* 4cumle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1932B6EFA0A00884AC4 /* 4cumle.mp3 */; };
 		EA37F1992B6EFA0B00884AC4 /* mujde.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1942B6EFA0A00884AC4 /* mujde.mp3 */; };
-		EA37F19A2B6EFA0B00884AC4 /* baris&birlik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */; };
 		EABA6E3E2B162B6100BBDC24 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EABA6E3D2B162B6100BBDC24 /* 2.mp3 */; };
 		EAC780642B701F81001B9F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC780632B701F81001B9F63 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -35,6 +35,7 @@
 		983EB7382B754CD9001B8E86 /* TutorialViewInContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewInContents.swift; sourceTree = "<group>"; };
 		983EB73D2B755914001B8E86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		983EB73F2B755F1C001B8E86 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		986FAB6B2B7BA1A4004D731E /* kalp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kalp.mp3; sourceTree = "<group>"; };
 		EA076E732B15DE71001A033C /* Calm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA076E762B15DE71001A033C /* CalmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalmApp.swift; sourceTree = "<group>"; };
 		EA076E7D2B15DE72001A033C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		EA37F1922B6EFA0A00884AC4 /* basari.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basari.mp3; sourceTree = "<group>"; };
 		EA37F1932B6EFA0A00884AC4 /* 4cumle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4cumle.mp3; sourceTree = "<group>"; };
 		EA37F1942B6EFA0A00884AC4 /* mujde.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mujde.mp3; sourceTree = "<group>"; };
-		EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "baris&birlik.mp3"; sourceTree = "<group>"; };
 		EABA6E3D2B162B6100BBDC24 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 		EAC780632B701F81001B9F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +102,7 @@
 				983EB7382B754CD9001B8E86 /* TutorialViewInContents.swift */,
 				983EB73E2B755914001B8E86 /* Localizable.strings */,
 				EA37F1932B6EFA0A00884AC4 /* 4cumle.mp3 */,
-				EA37F1952B6EFA0B00884AC4 /* baris&birlik.mp3 */,
+				986FAB6B2B7BA1A4004D731E /* kalp.mp3 */,
 				EA37F1922B6EFA0A00884AC4 /* basari.mp3 */,
 				EA37F1912B6EFA0900884AC4 /* Bereket&Denge.mp3 */,
 				EA37F1942B6EFA0A00884AC4 /* mujde.mp3 */,
@@ -184,13 +184,13 @@
 			files = (
 				EA37F1902B6EF28E00884AC4 /* nefes.mp3 in Resources */,
 				983EB73C2B755914001B8E86 /* Localizable.strings in Resources */,
+				986FAB6C2B7BA1A4004D731E /* kalp.mp3 in Resources */,
 				EABA6E3E2B162B6100BBDC24 /* 2.mp3 in Resources */,
 				EA37F1972B6EFA0B00884AC4 /* basari.mp3 in Resources */,
 				EA076E7E2B15DE72001A033C /* Preview Assets.xcassets in Resources */,
 				EA37F1992B6EFA0B00884AC4 /* mujde.mp3 in Resources */,
 				EA2EA2F52B160369002D300E /* 1.mp3 in Resources */,
 				EA37F1982B6EFA0B00884AC4 /* 4cumle.mp3 in Resources */,
-				EA37F19A2B6EFA0B00884AC4 /* baris&birlik.mp3 in Resources */,
 				EA1E5DBD2B716B440003D726 /* iletişim.mp3 in Resources */,
 				EA37F1962B6EFA0B00884AC4 /* Bereket&Denge.mp3 in Resources */,
 				EAC780642B701F81001B9F63 /* Assets.xcassets in Resources */,
@@ -350,7 +350,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calm/Preview Content\"";
 				DEVELOPMENT_TEAM = 899LNTN484;
 				ENABLE_PREVIEWS = YES;
@@ -367,7 +367,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = beratridvanasilturk.Calm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -384,7 +384,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calm/Preview Content\"";
 				DEVELOPMENT_TEAM = 899LNTN484;
 				ENABLE_PREVIEWS = YES;
@@ -401,7 +401,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = beratridvanasilturk.Calm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

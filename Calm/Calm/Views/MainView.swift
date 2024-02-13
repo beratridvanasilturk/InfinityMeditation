@@ -5,8 +5,6 @@
 //  Created by Berat Rıdvan Asiltürk on 28.11.2023.
 //
 
-// TODO: - Flag'ler UserDef'te tutulmali
-
 import SwiftUI
 import AVFoundation
 import AVKit
@@ -20,14 +18,13 @@ struct MainView: View {
     
     // Button Hide
     @State private var isHidden = false
-    
     @State var currentVideo = "nefesMp4"
     
     @State private var audioPlayer1: AVAudioPlayer!
     @State private var audioPlayer2: AVAudioPlayer!
     @State private var audioPlayNefes: AVAudioPlayer!
     @State private var audioPlayBasari: AVAudioPlayer!
-    @State private var audioPlayBarisVeBirlik: AVAudioPlayer!
+    @State private var audioPlayKalp: AVAudioPlayer!
     @State private var audioPlayBereketDenge: AVAudioPlayer!
     @State private var audioPlay4Cumle: AVAudioPlayer!
     @State private var audioPlayIletisim: AVAudioPlayer!
@@ -41,22 +38,18 @@ struct MainView: View {
     @State private var isPlayingIletisim = false
     @State private var isPlayingMujde = false
     @State private var isPlaying = false
-    
     @State private var isInfoVisible = false
     
     @StateObject private var audioPlayerManager = AudioPlayerManager()
     
     var body: some View {
         ZStack {
-            //            VideoPlayerView(currentVideo: $currentVideo)
-            //                .edgesIgnoringSafeArea(.all)
             Image("background")
-            //                .resizable()
                 .edgesIgnoringSafeArea(.bottom)
                 .opacity(0.2)
             VStack {
                 VStack {
-                  
+                    
                     
                     Spacer()
                     Button(action: {
@@ -159,12 +152,11 @@ struct MainView: View {
                 
                 
                 Button {
-                    currentVideo = "barisVeBirlikMp4"
                     checkIsPlaying()
                     withAnimation {
                         isHidden.toggle()
                     }
-                    playBarisVeBirlik()
+                    playKalp()
                 } label: {
                     if !isHidden {
                         Text("Kalp Çakrası")
@@ -296,15 +288,15 @@ struct MainView: View {
         }
     }
     
-    func playBarisVeBirlik() {
+    func playKalp() {
         isPlayingBarisVeBirlik = true
-        if let audioURL = Bundle.main.url(forResource: "baris&birlik", withExtension: "mp3") {
+        if let audioURL = Bundle.main.url(forResource: "kalp", withExtension: "mp3") {
             do {
-                audioPlayBarisVeBirlik = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayBarisVeBirlik.volume = 0.15
+                audioPlayKalp = try AVAudioPlayer(contentsOf: audioURL)
+                audioPlayKalp.volume = 0.15
                 //                    audioPlayer1.volume = 0.45
-                audioPlayBarisVeBirlik.numberOfLoops = -1
-                audioPlayBarisVeBirlik.play()
+                audioPlayKalp.numberOfLoops = -1
+                audioPlayKalp.play()
             } catch {
             }
         }
@@ -380,7 +372,7 @@ struct MainView: View {
         if isPlayingBarisVeBirlik == true {
             isPlayingBasari = false
             //            audioPlayBarisVeBirlik.pause()
-            audioPlayBarisVeBirlik.stop()
+            audioPlayKalp.stop()
         }
         if isPlayingBereketDenge == true {
             isPlayingBereketDenge = false
@@ -425,22 +417,21 @@ struct InfoView: View {
 }
 
 extension View {
-
+    
     func onLoad(perform action: (() -> Void)? = nil) -> some View {
         modifier(ViewDidLoadModifier(perform: action))
     }
-
 }
 
 struct ViewDidLoadModifier: ViewModifier {
-
+    
     @State private var didLoad = false
     private let action: (() -> Void)?
-
+    
     init(perform action: (() -> Void)? = nil) {
         self.action = action
     }
-
+    
     func body(content: Content) -> some View {
         content.onAppear {
             if didLoad == false {
@@ -449,36 +440,4 @@ struct ViewDidLoadModifier: ViewModifier {
             }
         }
     }
-
 }
-
-//struct VideoPlayerView: UIViewRepresentable {
-//    @Binding var currentVideo: String
-//    var avQueuePlayer = AVQueuePlayer()
-//
-//    func makeUIView(context: Context) -> UIView {
-//        let avPlayer = AVPlayer(url: Bundle.main.url(forResource: currentVideo, withExtension: "mp4")!)
-//        let playerLayer = AVPlayerLayer(player: avQueuePlayer)
-//        playerLayer.videoGravity = .resizeAspectFill
-//
-//        let view = UIView(frame: UIScreen.main.bounds)
-//
-//        // 90 derece saga yatirir ekrani
-//        //        playerLayer.transform = CATransform3DMakeRotation(.pi / 2, 0, 0, 1)
-//
-//        playerLayer.frame = view.frame
-//        view.layer.addSublayer(playerLayer)
-//
-//        avQueuePlayer.play()
-//        return view
-//    }
-//
-//    func updateUIView(_ uiView: UIView, context: Context) {
-//        guard let url = Bundle.main.url(forResource: currentVideo, withExtension: "mp4") else { return }
-//        let playerItem = AVPlayerItem(url: url)
-//        avQueuePlayer.pause()
-//        avQueuePlayer.removeAllItems()
-//        avQueuePlayer.replaceCurrentItem(with: playerItem)
-//        avQueuePlayer.play()
-//    }
-//}
