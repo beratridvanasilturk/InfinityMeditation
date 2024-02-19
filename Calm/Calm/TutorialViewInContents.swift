@@ -90,12 +90,14 @@ struct TutorialPageInContents: View {
             VStack(spacing: 30) {
                 Text(heading)
                     .bold()
+                    .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                     .font(.headline)
                     .padding()
                     .opacity(0.7)
                 
                 Text(subHeading)
+                    .foregroundColor(.black)
                     .bold()
                     .font(.body)
                     .lineLimit(10)
